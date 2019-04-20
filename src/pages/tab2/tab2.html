@@ -1,0 +1,24 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons>
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-title>Tourist Guide</ion-title> 
+      </ion-navbar>
+    </ion-header>
+    <ion-content padding>
+      <ion-list>
+       <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="{{item?.thumbnail}}">
+          </ion-thumbnail>
+          <h2>{{item?.name}}</h2>
+          <p>{{item?.profile}}</p>
+        </ion-item>
+        </button>
+      </ion-list>
+      </ion-content>

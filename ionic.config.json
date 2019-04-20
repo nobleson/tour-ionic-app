@@ -1,0 +1,7 @@
+{
+  "name": "DelightToursIonic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

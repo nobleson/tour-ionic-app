@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Guide Details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  <img src="{{selectedItem?.thumbnail}}">
+  <ion-card-content>
+      <ion-card-title>
+	  <h2  text-center  *ngIf="selectedItem">{{selectedItem?.name}}</h2>
+      </ion-card-title>
+    <p>
+       {{selectedItem?.profile}}
+    </p>
+   <ion-row>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-content>
+
